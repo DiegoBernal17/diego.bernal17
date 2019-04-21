@@ -1,0 +1,18 @@
+.Home {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Home__avatar {
+  background-image: url(https://image.flaticon.com/icons/svg/1141/1141797.svg);
+  background-size: 70px;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-color: #d9dbdd;
+  background-position: 5px 10px;
+  margin-bottom: 14px;
+}

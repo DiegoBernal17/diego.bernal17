@@ -1,0 +1,11 @@
+.img-card-projects {
+  background-color: whitesmoke;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: -2.3rem;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+}
