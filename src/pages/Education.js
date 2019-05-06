@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import DashboardLearning from "../components/Dashboard-Learning";
 import { config } from "../firebase/config";
-import * as firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/database";
 import Loading from "../components/Loading";
 
 firebase.initializeApp(config);

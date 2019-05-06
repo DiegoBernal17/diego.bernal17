@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/Home.css";
+import Skills from "../components/Skills";
 
 const Home = props => (
   <div className="container Home">
@@ -9,14 +10,19 @@ const Home = props => (
       Fullstack Developer
     </h6>
     <div className="mb-2">
-      <a href="https://twitter.com/guitek123" className="ml-4" about="_blank">
+      <a
+        href="https://twitter.com/guitek123"
+        className="ml-4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="mdi mdi-twitter"> </i>
         Twitter
       </a>
       <a
         href="https://github.com/DiegoBernal17"
         className="ml-4"
-        about="_blank"
+        target="_blank"
         rel="noopener noreferrer"
       >
         <i className="mdi mdi-github-box"> </i>
@@ -34,7 +40,7 @@ const Home = props => (
       <a
         href="https://platzi.com/@diego-p-bernal/"
         className="ml-4"
-        about="_blank"
+        target="_blank"
         rel="noopener noreferrer"
       >
         <i className="mdi mdi-book"> </i>
@@ -42,7 +48,7 @@ const Home = props => (
       </a>
     </div>
     <div className="font-weight-light mb-2">
-      <p>Hello, I'm Diego, I'm 23 and this is me:</p>
+      <p>Hello, welcome to my website. I'm Diego, I'm 23 and this is me:</p>
     </div>
     <div className="card mb-3">
       <div className="card-body text-left">
@@ -53,6 +59,9 @@ const Home = props => (
         <b>English: </b> Intermediate
       </div>
     </div>
+
+    <Skills />
+
     <a href="mailto:diego.bernal17@gmail.com">
       <i className="mdi mdi-email"> Send me an email</i>
     </a>
