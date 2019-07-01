@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Home.css";
 import Skills from "../components/Skills";
+import SocialLink from "../components/SocialLink";
 
 const Home = props => (
   <div className="container Home">
@@ -10,42 +11,26 @@ const Home = props => (
       Fullstack Developer
     </h6>
     <div className="mb-2">
-      <a
-        href="https://twitter.com/guitek123"
-        className="ml-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="mdi mdi-twitter"> </i>
-        Twitter
-      </a>
-      <a
-        href="https://github.com/DiegoBernal17"
-        className="ml-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="mdi mdi-github-box"> </i>
-        Github
-      </a>
-      <a
-        href="https://www.linkedin.com/in/diegopbernal/"
-        className="ml-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="mdi mdi-linkedin"> </i>
-        LinkedIn
-      </a>
-      <a
-        href="https://platzi.com/@diego-p-bernal/"
-        className="ml-4"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="mdi mdi-book"> </i>
-        Platzi
-      </a>
+      <SocialLink
+        url="https://twitter.com/guitek123"
+        icon="twitter"
+        title="Twitter"
+      />
+      <SocialLink
+        url="https://github.com/DiegoBernal17"
+        icon="github-box"
+        title="Github"
+      />
+      <SocialLink
+        url="https://www.linkedin.com/in/diegopbernal/"
+        icon="linkedin"
+        title="Linkedin"
+      />
+      <SocialLink
+        url="https://platzi.com/@diego-p-bernal/"
+        icon="book"
+        title="Platzi"
+      />
     </div>
     <div className="font-weight-light mb-2">
       <p>Hello, welcome to my website. I'm Diego, I'm 23 and this is me:</p>
@@ -62,9 +47,14 @@ const Home = props => (
 
     <Skills />
 
-    <a href="mailto:diego.bernal17@gmail.com">
-      <i className="mdi mdi-email"> Send me an email</i>
-    </a>
+    <div className="row">
+      <SocialLink
+        url="mailto:diego.bernal17@gmail.com"
+        icon="email"
+        title="Send me an email"
+      />
+      <SocialLink url="CV.pdf" icon="file-document-outline" title="View CV" />
+    </div>
   </div>
 );
 

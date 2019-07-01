@@ -15,19 +15,23 @@ export default class Education extends Component {
   state = {
     courses_in_progress: [],
     courses_finised: [],
+    courses_old: [],
     careers: []
   };
 
   componentDidMount() {
     coursesRef.on("value", snapshot => {
       const in_progress = [];
+      const old = [];
       this.setState({
         courses_finised: snapshot.val().filter(course => {
-          if (course.progress === 100) return true;
-          else in_progress.push(course);
+          if (course.progress === 100 && course.active) return true;
+          if (course.progress < 100) in_progress.push(course);
+          if (!course.active) old.push(course);
           return false;
         }),
-        courses_in_progress: in_progress
+        courses_in_progress: in_progress,
+        courses_old: old
       });
     });
     careersRef.on("value", snapshot => {
@@ -57,6 +61,9 @@ export default class Education extends Component {
         <h3 className="mt-4 mb-0">Courses ⬎</h3>
         <small className="text-muted font-weight-light">Finished courses</small>
         <DashboardLearning courses={this.state.courses_finised} />
+        <h3 className="mt-4 mb-0">Courses ⬎</h3>
+        <small className="text-muted font-weight-light">Old courses</small>
+        <DashboardLearning courses={this.state.courses_old} />
         <h3 className="mt-4 mb-0">Careers ⬎</h3>
         <DashboardLearning courses={this.state.careers} golden={true} />
       </div>

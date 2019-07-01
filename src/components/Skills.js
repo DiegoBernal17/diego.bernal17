@@ -6,7 +6,7 @@ const Skills = () => (
     <div className="row text-left">
       <div className="col-md-6 mb-2">
         <h5 className="text-center">Soft</h5>
-        <ul class="list-group">
+        <ul className="list-group">
           <li className="list-group-item">Teamwork</li>
           <li className="list-group-item">Time management</li>
           <li className="list-group-item">Problem-solving</li>
@@ -16,7 +16,7 @@ const Skills = () => (
       </div>
       <div className="col-md-6 mb-3">
         <h5 className="text-center">Hard</h5>
-        <ul class="list-group">
+        <ul className="list-group">
           <li className="list-group-item">
             <span className="badge badge-secondary">HTML</span> (And posible to
             learn preprocessors)

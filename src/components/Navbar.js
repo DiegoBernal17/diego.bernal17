@@ -4,6 +4,12 @@ import "./styles/Navbar.css";
 
 const Navbar = props => (
   <header className="Navbar">
+    {/* <button
+      className="float-right btn btn-dark btn-sm"
+      onClick={props.changeDarkMode}
+    >
+      DarkMode
+    </button> */}
     <div className="Navbar__link">
       <Link to="/" className="Navbar__link">
         <span className="mdi mdi-account-circle"> </span>

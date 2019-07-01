@@ -3,6 +3,11 @@ body {
   font-family: "Noto Sans SC", sans-serif;
 }
 
+html,
+* {
+  margin: 0;
+}
+
 .container {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }

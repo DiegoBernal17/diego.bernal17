@@ -6,17 +6,19 @@ import Portfolio from "../pages/Portfolio";
 import Education from "../pages/Education";
 import NotFound from "./NotFound";
 
-const App = () => (
-  <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/education" component={Education} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
-  </BrowserRouter>
-);
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/education" component={Education} />
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
+    </BrowserRouter>
+  );
+};
 
 export default App;
